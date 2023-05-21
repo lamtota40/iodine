@@ -10,3 +10,4 @@ apt update
 apt upgrade -y
 apt install iodine
 apt install libz-dev
+iodined  -f -c -P [password] 192.168.77.1 s.testeroni.com
