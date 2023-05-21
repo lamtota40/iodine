@@ -10,4 +10,6 @@ apt update
 apt upgrade -y
 apt install iodine
 apt install libz-dev
-iodined  -f -c -P pass 192.168.77.1 s.testeroni.com
+iodined -c -f 10.0.0.1 -P pass ns.sit.my.id
+echo 1 > /proc/sys/net/ipv4/ip_forward
+sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
